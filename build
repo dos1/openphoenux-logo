@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p output
+synfig -T3 $@ openphoenux.sif -o output/openphoenux.png
+ffmpeg -r 24 -i output/openphoenux.%04d.png -i sound.flac output/openphoenux.webm
